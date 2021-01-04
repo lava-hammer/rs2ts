@@ -1,2 +1,2 @@
 # rs2ts
-a compiler translates rust into typescript
+a transpiler turning rust into typescript
