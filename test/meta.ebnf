@@ -1,0 +1,5 @@
+entry = { rule };
+splitter = " " | \t | \n;
+rule = name, "=", body , ";";
+
+
