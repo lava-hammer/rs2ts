@@ -1,5 +1,14 @@
-entry = { rule };
-splitter = " " | \t | \n;
-rule = name, "=", body , ";";
+ENTRY = { rule | comment };
+sp = " " | "\t" | "\n";
+comment = "//", {"\c"};
+rule = {sp}, name, {sp}, "=", list, ";", {sp}, [comment];
+name = \a, { \w };
+list = item | ( { item, "," }, item );
+item = {sp}, name | term | group | alter | option | repeat, {sp};
+term = "\"", "\S", {"\S"} ,"\"";
+group = "(", {sp}, list, {sp}, ")";
+alter = item, {sp}, "|", {sp}, item;
+option = "[", {sp}, list, {sp}, "]";
+repeat = "{", {sp}, list, {sp}, "}";
 
 

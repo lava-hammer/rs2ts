@@ -13,9 +13,15 @@
 
 | Extension        |           |
 |------------------|-----------|
+| alphabet         | \a        |
 | digit            | \d        |
 | any space        | \s        |
+| any non space    | \S        |
 | char, digit, _   | \w        |
+| line feed        | \n        |
+| any char but line feed | \c  |
+| Escape "         | \"        |
+| Escape \         | \\        |
 
 | Not supported    |           |
 |------------------|-----------|

@@ -2,3 +2,4 @@ yarn-error.log
 bin
 node_modules
 test/out.rs
+test/local
